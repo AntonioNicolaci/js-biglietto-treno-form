@@ -5,18 +5,71 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biglietteria Boolean Nord</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <form action="">
-        <label for="km">Chilometri da Percorrere</label>
-        <input type="text" name="km" id="km">
-        <label for="age">Eta' del passegero</label>
-        <input type="text" name="age" id="age">
-        <input type="button" value="Invia" onclick="calc_ticket()">
-        <button type="reset">reset</button>
-    </form>
+<body class="text-bg-dark">
+        <h1 class="text-center mt-3 mb-5">Stazione Booelan Nord</h1>
+        <h3 class="mb-5">Biglietteria</h3>
+    
+
+    <div class="d-flex flex-column p-3 gap-2 rounded w-50 mx-2 ms_form">
+        <div class="d-flex flex-column">
+            <label for="km">Nome sul biglietto:</label>
+            <input type="text" name="name" id="name" class="w-25">    
+        </div>
+        <div class="d-flex flex-column">
+            <label for="km">Chilometri da Percorrere:</label>
+            <input type="text" name="km" id="km" class="w-25">    
+        </div>
+        <div class="rounded">
+            <p>Seleziona la tua età:</p>
+            <div>
+                <input type="radio" id="minorenne" name="age" value="minorenne">
+                <label for="html">Minorenne (età minore di 18 anni)</label>
+            </div>
+            <div>
+                <input type="radio" id="maggiorenne" name="age" value="maggiorenne">
+                <label for="css">Maggiorenne (età maggiore di 18 anni)</label>
+            </div>
+            <div>
+                <input type="radio" id="pensionato" name="age" value="pensionato">
+                <label for="javascript">Pensionato (età maggiore di 65 anni)</label>
+            </div>
+        </div>
+        
+        <input type="button" value="Invia" onclick="calc_ticket()" class="align-self-baseline">
+    </div>
+
+
+    <h2 class="mt-5">Dettagli passegero:</h2>
+    <div class="container-fluid offset-2 col-8 rounded d-flex mt-5 px-0 ms_biglietto">
+        <div class="d-flex text-center col-2 ms_nome">
+            <span id="span_nome">---(---)</span>
+        </div>
+        <div class="bg-light d-flex flex-column text-center col-2">
+            <span class="fw-bold">Tipologia Biglietto:</span>
+            <span id="span_biglietto"></span>
+        </div>
+        <div class="bg-light d-flex flex-column text-center col-2">
+            <span class="fw-bold">Carrozza:</span>
+            <span id="span_carrozza"></span>
+        </div>
+        <div class="bg-light d-flex flex-column text-center col-2">
+            <span class="fw-bold">Posto:</span>
+            <span id="span_posto"></span>
+        </div>
+        <div class="bg-light d-flex flex-column text-center col-2">
+            <span class="fw-bold">Codice PC:</span>
+            <span id="span_PC"></span>
+        </div>
+        <div class="bg-light d-flex flex-column text-center col-2">
+            <span class="fw-bold">Costo biglietto:</span>
+            <span id="span_costo"></span>
+        </div>
+    </div>
 
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 </body>
 </html>
