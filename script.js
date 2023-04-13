@@ -10,7 +10,7 @@ if(age < 18){
     costo_finale = costo_biglietto - (costo_biglietto * (20/100));
     // document.getElementById("prezzo_finale").innerHTML = costo_finale.toFixed(2);
     console.log(costo_finale.toFixed(2))
-} else if(age == 65){
+} else if(age >= 65){
     costo_finale = costo_biglietto - (costo_biglietto * (40/100));
     // document.getElementById("prezzo_finale").innerHTML = costo_finale.toFixed(2);
     console.log(costo_finale.toFixed(2))
